@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Blue Wave Construction — Business Card BACK v2
+     Trim: 3.5" x 2"  (1050 x 600 px at 300 dpi)
+     With bleed: 3.625" x 2.125" (1088 x 638 px) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1088 638" width="1088" height="638">
+  <title>Blue Wave Construction — Business Card Back</title>
+
+  <!-- Deep navy bleed background, no watermark -->
+  <rect width="1088" height="638" fill="#0A2540"/>
+
+  <!-- Name block, top-left -->
+  <text x="80" y="175"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif"
+        font-weight="600"
+        font-size="44"
+        fill="#F5EFE4"
+        letter-spacing="0">RYAN VERBIEST</text>
+
+  <!-- Title -->
+  <text x="80" y="220"
+        font-family="Inter Tight, Helvetica Neue, Arial, sans-serif"
+        font-weight="400"
+        font-size="18"
+        fill="#4FA3D1"
+        letter-spacing="6">GENERAL CONTRACTOR</text>
+
+  <!-- Thin divider -->
+  <line x1="80" y1="280" x2="1010" y2="280"
+        stroke="#E8D9B8"
+        stroke-width="0.5"
+        opacity="0.35"/>
+
+  <!-- Contact block, left-aligned mono -->
+  <text x="80" y="345"
+        font-family="JetBrains Mono, Menlo, Consolas, monospace"
+        font-size="20"
+        fill="#F5EFE4"
+        letter-spacing="1">(310) 995-7741</text>
+
+  <text x="80" y="380"
+        font-family="JetBrains Mono, Menlo, Consolas, monospace"
+        font-size="20"
+        fill="#F5EFE4"
+        letter-spacing="1">ryanverbiest@gmail.com</text>
+
+  <text x="80" y="415"
+        font-family="JetBrains Mono, Menlo, Consolas, monospace"
+        font-size="20"
+        fill="#F5EFE4"
+        letter-spacing="1">bluewavela.com</text>
+
+  <!-- Licenses, bottom-left -->
+  <text x="80" y="555"
+        font-family="JetBrains Mono, Menlo, Consolas, monospace"
+        font-size="13"
+        fill="#E8D9B8"
+        opacity="0.7"
+        letter-spacing="2">CSLB #1153965  ·  DRE #02185763</text>
+
+  <!-- Small wave mark, bottom-right (subtle brand echo) -->
+  <path d="M 930 553 Q 950 547, 970 553 T 1010 553"
+        stroke="#4FA3D1"
+        stroke-width="1.5"
+        fill="none"
+        stroke-linecap="round"
+        opacity="0.6"/>
+</svg>

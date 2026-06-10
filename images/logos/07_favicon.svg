@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Blue Wave Construction - Favicon</title>
+  <rect width="64" height="64" fill="#0A2540"/>
+  <text x="32" y="36" text-anchor="middle" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="22" fill="#F5EFE4" letter-spacing="0">BW</text>
+  <path d="M 14 46 Q 22 42, 30 46 T 46 46 T 54 46" stroke="#4FA3D1" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

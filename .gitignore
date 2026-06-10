@@ -1,2 +1,6 @@
 .claude/
 .DS_Store
+
+# Sensitive business/tax documents — never publish to a public repo
+images/form2553.pdf
+images/SELLERS PERMIT.pdf

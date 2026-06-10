@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- US Letter Letterhead — 8.5" x 11" at 72dpi (612px x 792px) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 792" width="612" height="792">
+  <title>Blue Wave Construction - Letterhead</title>
+  <!-- Page background -->
+  <rect width="612" height="792" fill="#FFFFFF"/>
+  <!-- HEADER: Centered logo, top of page -->
+  <g transform="translate(306, 75)">
+    <text x="0" y="0" text-anchor="middle" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="500" font-size="32" fill="#0A2540" letter-spacing="6">BLUE WAVE</text>
+    <path d="M -55 18 Q -35 11, -15 18 T 25 18 T 65 18" stroke="#1B6CA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <text x="0" y="38" text-anchor="middle" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="400" font-size="7" fill="#0A2540" letter-spacing="9">CONSTRUCTION</text>
+  </g>
+  <!-- Header rule -->
+  <line x1="72" y1="155" x2="540" y2="155" stroke="#0A2540" stroke-width="0.5" opacity="0.25"/>
+  <!-- Body content area placeholder (faint guide) -->
+  <text x="72" y="200" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="10" fill="#0A2540" opacity="0.3">[ DATE ]</text>
+  <text x="72" y="230" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="10" fill="#0A2540" opacity="0.3">[ RECIPIENT NAME ]</text>
+  <text x="72" y="244" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="10" fill="#0A2540" opacity="0.3">[ ADDRESS ]</text>
+  <text x="72" y="290" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-size="10" fill="#0A2540" opacity="0.3">[ LETTER BODY ]</text>
+  <!-- Footer rule -->
+  <line x1="72" y1="710" x2="540" y2="710" stroke="#0A2540" stroke-width="0.5" opacity="0.25"/>
+  <!-- FOOTER: 3-column contact info -->
+  <text x="72" y="730" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">BLUEWAVECONSTRUCTION.LA</text>
+  <text x="72" y="745" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">RYAN@BLUEWAVECONSTRUCTION.LA</text>
+  <text x="306" y="730" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">(310) 995-7741</text>
+  <text x="306" y="745" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">SOUTH BAY · CA</text>
+  <text x="540" y="730" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">CSLB #1153965</text>
+  <text x="540" y="745" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.7" letter-spacing="1.5">DRE #02185763</text>
+</svg>

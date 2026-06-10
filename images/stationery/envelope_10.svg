@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- #10 Envelope — 9.5" x 4.125" at 72dpi (684px x 297px) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 684 297" width="684" height="297">
+  <title>Blue Wave Construction - #10 Envelope</title>
+  <rect width="684" height="297" fill="#F5EFE4"/>
+  <!-- Return address block, top-left -->
+  <g transform="translate(36, 38)">
+    <text x="0" y="0" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="500" font-size="18" fill="#0A2540" letter-spacing="3">BLUE WAVE</text>
+    <path d="M 0 10 Q 18 5, 36 10 T 70 10 T 105 10" stroke="#1B6CA8" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <text x="0" y="24" font-family="Inter Tight, Helvetica Neue, Arial, sans-serif" font-weight="400" font-size="5" fill="#0A2540" letter-spacing="6">CONSTRUCTION</text>
+    <text x="0" y="48" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.8" letter-spacing="1">[ STREET ADDRESS ]</text>
+    <text x="0" y="60" font-family="JetBrains Mono, monospace" font-size="7" fill="#0A2540" opacity="0.8" letter-spacing="1">[ CITY, CA ZIP ]</text>
+  </g>
+  <!-- Bottom-right small wave accent -->
+  <path d="M 580 260 Q 605 252, 630 260 T 660 260" stroke="#1B6CA8" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+</svg>

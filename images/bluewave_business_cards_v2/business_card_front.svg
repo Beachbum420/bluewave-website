@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Blue Wave Construction — Business Card FRONT v2
+     Trim: 3.5" x 2"  (1050 x 600 px at 300 dpi)
+     With bleed: 3.625" x 2.125" (1088 x 638 px)
+     Safe zone: 0.125" inset from trim -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1088 638" width="1088" height="638">
+  <title>Blue Wave Construction — Business Card Front</title>
+
+  <!-- Bone-paper background, full bleed -->
+  <rect width="1088" height="638" fill="#F5EFE4"/>
+
+  <!-- Centered brand block -->
+  <g transform="translate(544, 305)">
+    <!-- BLUE WAVE wordmark -->
+    <text x="0" y="0"
+          text-anchor="middle"
+          font-family="Inter Tight, Helvetica Neue, Arial, sans-serif"
+          font-weight="500"
+          font-size="76"
+          fill="#0A2540"
+          letter-spacing="14">BLUE WAVE</text>
+
+    <!-- Signature wave -->
+    <path d="M -130 38 Q -95 26, -60 38 T 10 38 T 80 38 T 130 38"
+          stroke="#1B6CA8"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"/>
+
+    <!-- CONSTRUCTION subtitle -->
+    <text x="0" y="80"
+          text-anchor="middle"
+          font-family="Inter Tight, Helvetica Neue, Arial, sans-serif"
+          font-weight="400"
+          font-size="13"
+          fill="#0A2540"
+          letter-spacing="22">CONSTRUCTION</text>
+  </g>
+</svg>

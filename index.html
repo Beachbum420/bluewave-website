@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blue Wave Construction — General Contractor, South Bay Los Angeles</title>
-  <meta name="description" content="Blue Wave Construction is a licensed, owner-operated boutique general contractor serving the South Bay of Los Angeles. Renovations, repairs, and fix-and-flip work. CA GC License #1153965." />
+  <meta name="description" content="Blue Wave Construction is a licensed, owner-operated boutique general contractor serving the South Bay of Los Angeles. Renovations, repairs, and fix-and-flip work. CSLB #1153965." />
 
   <!-- Open Graph / social preview -->
   <meta property="og:title" content="Blue Wave Construction" />
@@ -13,26 +13,44 @@
   <meta property="og:url" content="https://bluewavela.com" />
   <link rel="canonical" href="https://bluewavela.com" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logos/07_favicon.svg" />
+  <link rel="alternate icon" href="images/logos/bluewave_favicon_400.png" />
+
+  <!-- Brand typography: Inter Tight + JetBrains Mono, self-hosted from /fonts -->
+  <link rel="preload" href="fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+
   <style>
     /* ------------------------------------------------------------------
        BRAND TOKENS
        Tune these to match the estimate PDF once it's in the repo.
        ------------------------------------------------------------------ */
     :root {
-      --navy:        #0c2742;  /* primary brand navy */
-      --navy-deep:   #081d33;  /* darker sections / footer */
-      --wave:        #2f7fc1;  /* "blue wave" accent */
-      --wave-soft:   #cfe0ef;  /* light accent / borders */
-      --ink:         #14202b;  /* body text on light */
-      --muted:       #5f7184;  /* secondary text */
-      --paper:       #ffffff;
-      --paper-warm:  #f5f8fb;  /* alternating section bg */
-      --line:        #e2eaf1;
+      /* Exact Blue Wave brand palette (from the brand asset package) */
+      --navy:  #0A2540;  /* primary brand color — wordmarks, dark sections, headlines */
+      --deep:  #0E3A5F;  /* subtle gradient pair to navy — hero backgrounds */
+      --wave:  #1B6CA8;  /* accent only — wave underline, hover states on light */
+      --sky:   #4FA3D1;  /* reverse-mode wave on dark, demoted text on navy */
+      --sand:  #E8D9B8;  /* warm secondary background — premium stock feel */
+      --bone:  #F5EFE4;  /* off-white default light background */
+      --char:  #141B24;  /* near-black body text */
+
+      /* Semantic aliases used throughout the stylesheet */
+      --navy-deep:  var(--navy);
+      --wave-soft:  #BFD7E8;   /* light sky tint — labels/accents on navy */
+      --ink:        var(--char);
+      --muted:      #5a6a78;   /* secondary text on light */
+      --paper:      var(--bone);
+      --paper-warm: #efe5cf;   /* soft sand — tiles, placeholders */
+      --line:       #e3d9c4;   /* warm hairline on bone */
 
       --maxw: 1080px;
       --pad: clamp(1.25rem, 4vw, 2.5rem);
 
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Courier New', monospace;
     }
 
     * { box-sizing: border-box; }
@@ -62,12 +80,13 @@
     }
 
     .eyebrow {
+      font-family: var(--mono);
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.78rem;
-      font-weight: 700;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+      font-weight: 500;
       color: var(--wave);
-      margin: 0 0 0.75rem;
+      margin: 0 0 0.85rem;
     }
 
     .btn {
@@ -110,10 +129,8 @@
       padding-top: 0.8rem;
       padding-bottom: 0.8rem;
     }
-    .nav-mark { display: flex; align-items: center; gap: 0.6rem; }
-    .nav-mark .stack { display: flex; flex-direction: column; line-height: 1; }
-    .nav-mark .bw { font-weight: 800; letter-spacing: 0.04em; color: var(--navy); font-size: 1.05rem; }
-    .nav-mark .cn { font-size: 0.58rem; letter-spacing: 0.34em; color: var(--muted); font-weight: 600; margin-top: 2px; }
+    .nav-mark { display: flex; align-items: center; }
+    .nav-logo { display: block; width: clamp(150px, 22vw, 188px); height: auto; }
     .nav-links { display: flex; gap: 1.6rem; align-items: center; }
     .nav-links a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
     .nav-links a:hover { color: var(--wave); text-decoration: none; }
@@ -125,9 +142,9 @@
     /* ---------------- HERO ---------------- */
     .hero {
       background:
-        radial-gradient(1200px 500px at 70% -10%, rgba(47,127,193,0.25), transparent 60%),
-        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-      color: #fff;
+        radial-gradient(1200px 520px at 72% -10%, rgba(79,163,209,0.22), transparent 60%),
+        linear-gradient(165deg, var(--navy) 0%, var(--deep) 100%);
+      color: var(--bone);
       position: relative;
       overflow: hidden;
     }
@@ -139,25 +156,8 @@
     }
 
     /* Wordmark / logo lockup */
-    .lockup { margin-bottom: 1.5rem; }
-    .lockup .wordmark {
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      font-size: clamp(2.6rem, 8vw, 4.6rem);
-      line-height: 0.95;
-      margin: 0;
-      color: #fff;
-    }
-    .lockup .subword {
-      letter-spacing: 0.42em;
-      font-size: clamp(0.7rem, 2.2vw, 1rem);
-      font-weight: 600;
-      color: var(--wave-soft);
-      margin: 0.55rem 0 0;
-      padding-left: 0.1em;
-    }
-    /* Wave-underline accent */
-    .wave-accent { display: block; width: clamp(140px, 30vw, 240px); height: 14px; margin-top: 0.9rem; color: var(--wave); }
+    .lockup { margin-bottom: 1.75rem; }
+    .hero-logo { display: block; width: clamp(280px, 56vw, 520px); height: auto; }
 
     .hero h1 {
       font-size: clamp(1.4rem, 3.4vw, 2.1rem);
@@ -166,7 +166,7 @@
       margin-top: 1.8rem;
     }
     .hero p.lede {
-      color: #d4e2f0;
+      color: #dce7f0;
       font-size: clamp(1rem, 2.2vw, 1.18rem);
       max-width: 56ch;
       margin: 1rem 0 2rem;
@@ -177,21 +177,13 @@
       margin-top: 2.5rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1.2rem 2.4rem;
-      font-size: 0.92rem;
-      color: #b9cde0;
+      gap: 0.9rem 2.2rem;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.01em;
+      color: var(--sky);
     }
-    .hero-meta b { color: #fff; font-weight: 600; }
-
-    /* Logo placeholder badge (swap for real logo file) */
-    .logo-slot {
-      width: 56px; height: 56px; flex: 0 0 auto;
-      border-radius: 10px;
-      background: var(--navy);
-      display: grid; place-items: center;
-      color: var(--wave-soft);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
+    .hero-meta b { color: var(--bone); font-weight: 500; }
 
     /* ---------------- SECTIONS ---------------- */
     section { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
@@ -251,7 +243,7 @@
       display: grid;
       place-items: center;
       background:
-        repeating-linear-gradient(45deg, #eef3f8 0 12px, #f6f9fc 12px 24px);
+        repeating-linear-gradient(45deg, #efe6d2 0 12px, #f6f0e2 12px 24px);
       color: var(--muted);
     }
     .gallery .shot.placeholder .ph-inner { text-align: center; padding: 1rem; }
@@ -263,9 +255,9 @@
     /* ---------------- CONTACT / CTA ---------------- */
     .contact {
       background:
-        radial-gradient(900px 400px at 20% 120%, rgba(47,127,193,0.22), transparent 60%),
-        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-      color: #fff;
+        radial-gradient(900px 420px at 18% 120%, rgba(79,163,209,0.20), transparent 60%),
+        linear-gradient(200deg, var(--navy) 0%, var(--deep) 100%);
+      color: var(--bone);
     }
     .contact .section-head h2 { color: #fff; }
     .contact .section-head p { color: #c8d8e8; }
@@ -279,7 +271,7 @@
     .contact-list { list-style: none; padding: 0; margin: 0; }
     .contact-list li { display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
     .contact-list li:last-child { border-bottom: 0; }
-    .contact-list .k { color: #9fb8d0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; min-width: 84px; padding-top: 2px; }
+    .contact-list .k { font-family: var(--mono); color: var(--sky); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; min-width: 96px; padding-top: 3px; }
     .contact-list .v { color: #fff; font-weight: 500; }
     .contact-list .v a { color: #fff; }
     .contact-list .v a:hover { color: var(--wave-soft); }
@@ -296,23 +288,25 @@
 
     /* ---------------- FOOTER ---------------- */
     footer.site {
-      background: var(--navy-deep);
-      color: #9fb3c7;
-      padding: 2rem 0;
-      font-size: 0.88rem;
+      background: var(--navy);
+      color: var(--sky);
+      padding: 2.25rem 0;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.01em;
     }
     .foot {
-      display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+      display: flex; flex-wrap: wrap; gap: 1rem 1.75rem;
       justify-content: space-between; align-items: center;
     }
-    .foot .mark b { color: #fff; font-weight: 700; letter-spacing: 0.04em; }
-    .foot a { color: #cfe0ef; }
+    .foot-logo { width: 150px; height: auto; display: block; }
+    .foot a { color: var(--wave-soft); }
     .lic-badge {
-      display: inline-flex; align-items: center; gap: 0.4rem;
+      display: inline-flex; align-items: center; gap: 0.45rem;
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 999px;
-      padding: 0.3rem 0.8rem;
-      color: #cfe0ef; font-size: 0.82rem;
+      padding: 0.32rem 0.85rem;
+      color: var(--wave-soft); font-size: 0.74rem;
     }
 
     /* Reduced motion */
@@ -326,17 +320,13 @@
   <!-- ================= HEADER ================= -->
   <header class="site">
     <div class="wrap nav">
-      <a class="nav-mark" href="#top" aria-label="Blue Wave Construction home">
-        <!-- LOGO PLACEHOLDER: replace this .logo-slot block with <img src="images/logo.svg" ...> -->
-        <span class="logo-slot" aria-hidden="true">
-          <svg width="26" height="14" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 14c6 0 8-8 14-8s8 8 14 8 8-8 14-8 8 8 14 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
-          </svg>
-        </span>
-        <span class="stack">
-          <span class="bw">BLUE WAVE</span>
-          <span class="cn">CONSTRUCTION</span>
-        </span>
+      <a class="nav-mark" href="#top" aria-label="Blue Wave Construction — home">
+        <!-- Primary horizontal logo (navy on light) — inlined so it renders in Inter Tight -->
+        <svg class="nav-logo" viewBox="0 0 800 280" role="img" aria-label="Blue Wave Construction" xmlns="http://www.w3.org/2000/svg">
+          <text x="400" y="125" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="76" fill="#0A2540" letter-spacing="14">BLUE WAVE</text>
+          <path d="M 270 165 Q 305 152, 340 165 T 410 165 T 480 165 T 530 165" stroke="#1B6CA8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="400" y="210" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="13" fill="#0A2540" letter-spacing="22">CONSTRUCTION</text>
+        </svg>
       </a>
       <nav class="nav-links">
         <a href="#services">Services</a>
@@ -352,11 +342,11 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="lockup">
-        <p class="wordmark">BLUE&nbsp;WAVE</p>
-        <p class="subword">CONSTRUCTION</p>
-        <!-- wave-underline accent -->
-        <svg class="wave-accent" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M2 8c20 0 22-10 40-10s22 12 40 12 22-10 40-10 22 12 40 12 22-10 40-10 22 12 36 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Reverse horizontal logo (for dark backgrounds) — inlined so the wordmark renders in Inter Tight -->
+        <svg class="hero-logo" viewBox="0 0 800 280" role="img" aria-label="Blue Wave Construction" xmlns="http://www.w3.org/2000/svg">
+          <text x="400" y="125" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="76" fill="#F5EFE4" letter-spacing="14">BLUE WAVE</text>
+          <path d="M 270 165 Q 305 152, 340 165 T 410 165 T 480 165 T 530 165" stroke="#4FA3D1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <text x="400" y="210" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="13" fill="#F5EFE4" letter-spacing="22">CONSTRUCTION</text>
         </svg>
       </div>
 
@@ -374,7 +364,7 @@
 
       <div class="hero-meta">
         <span><b>South Bay, Los Angeles</b> &nbsp;·&nbsp; service area</span>
-        <span><b>CA GC License #1153965</b></span>
+        <span><b>CSLB #1153965</b></span>
         <span><b>(310) 995-7741</b></span>
       </div>
     </div>
@@ -474,7 +464,7 @@
           <li><span class="k">Phone</span><span class="v"><a href="tel:+13109957741">(310) 995-7741</a></span></li>
           <li><span class="k">Email</span><span class="v"><a href="mailto:ryan@bluewavela.com">ryan@bluewavela.com</a></span></li>
           <li><span class="k">Service area</span><span class="v">South Bay, Los Angeles</span></li>
-          <li><span class="k">License</span><span class="v">CA GC #1153965</span></li>
+          <li><span class="k">License</span><span class="v">CSLB #1153965</span></li>
         </ul>
 
         <div class="contact-card">
@@ -489,12 +479,17 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site">
     <div class="wrap foot">
-      <div class="mark"><b>BLUE WAVE</b> CONSTRUCTION &nbsp;·&nbsp; South Bay, Los Angeles</div>
+      <!-- Reverse logo on navy footer -->
+      <svg class="foot-logo" viewBox="0 0 800 280" role="img" aria-label="Blue Wave Construction" xmlns="http://www.w3.org/2000/svg">
+        <text x="400" y="125" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="500" font-size="76" fill="#F5EFE4" letter-spacing="14">BLUE WAVE</text>
+        <path d="M 270 165 Q 305 152, 340 165 T 410 165 T 480 165 T 530 165" stroke="#4FA3D1" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <text x="400" y="210" text-anchor="middle" font-family="'Inter Tight', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="13" fill="#F5EFE4" letter-spacing="22">CONSTRUCTION</text>
+      </svg>
       <span class="lic-badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
-        Licensed &amp; insured · CA GC #1153965
+        Licensed &amp; insured · CSLB #1153965
       </span>
-      <div>&copy; <span id="yr">2026</span> Blue Wave Construction</div>
+      <div>&copy; <span id="yr">2026</span> Blue Wave Construction · South Bay, Los Angeles</div>
     </div>
   </footer>
 
