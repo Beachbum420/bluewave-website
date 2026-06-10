@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Wave Construction — General Contractor, South Bay Los Angeles</title>
+  <meta name="description" content="Blue Wave Construction is a licensed, owner-operated boutique general contractor serving the South Bay of Los Angeles. Renovations, repairs, and fix-and-flip work. CA GC License #1153965." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Blue Wave Construction" />
+  <meta property="og:description" content="Licensed, owner-operated general contractor — South Bay Los Angeles. Renovations, repairs, and fix-and-flip work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bluewavela.com" />
+  <link rel="canonical" href="https://bluewavela.com" />
+
+  <style>
+    /* ------------------------------------------------------------------
+       BRAND TOKENS
+       Tune these to match the estimate PDF once it's in the repo.
+       ------------------------------------------------------------------ */
+    :root {
+      --navy:        #0c2742;  /* primary brand navy */
+      --navy-deep:   #081d33;  /* darker sections / footer */
+      --wave:        #2f7fc1;  /* "blue wave" accent */
+      --wave-soft:   #cfe0ef;  /* light accent / borders */
+      --ink:         #14202b;  /* body text on light */
+      --muted:       #5f7184;  /* secondary text */
+      --paper:       #ffffff;
+      --paper-warm:  #f5f8fb;  /* alternating section bg */
+      --line:        #e2eaf1;
+
+      --maxw: 1080px;
+      --pad: clamp(1.25rem, 4vw, 2.5rem);
+
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 0.5em; }
+
+    a { color: var(--wave); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding-left: var(--pad);
+      padding-right: var(--pad);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--wave);
+      margin: 0 0 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+    .btn-primary {
+      background: var(--wave);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      text-decoration: none;
+      background: #2569a3;
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(255,255,255,0.5);
+      color: #fff;
+    }
+    .btn-ghost:hover { text-decoration: none; border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    /* ---------------- HEADER / NAV ---------------- */
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
+    .nav-mark { display: flex; align-items: center; gap: 0.6rem; }
+    .nav-mark .stack { display: flex; flex-direction: column; line-height: 1; }
+    .nav-mark .bw { font-weight: 800; letter-spacing: 0.04em; color: var(--navy); font-size: 1.05rem; }
+    .nav-mark .cn { font-size: 0.58rem; letter-spacing: 0.34em; color: var(--muted); font-weight: 600; margin-top: 2px; }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a { color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--wave); text-decoration: none; }
+    .nav-cta { font-weight: 700 !important; color: var(--wave) !important; }
+    @media (max-width: 680px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      background:
+        radial-gradient(1200px 500px at 70% -10%, rgba(47,127,193,0.25), transparent 60%),
+        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      padding-top: clamp(3.5rem, 9vw, 6rem);
+      padding-bottom: clamp(3.5rem, 9vw, 6rem);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Wordmark / logo lockup */
+    .lockup { margin-bottom: 1.5rem; }
+    .lockup .wordmark {
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      font-size: clamp(2.6rem, 8vw, 4.6rem);
+      line-height: 0.95;
+      margin: 0;
+      color: #fff;
+    }
+    .lockup .subword {
+      letter-spacing: 0.42em;
+      font-size: clamp(0.7rem, 2.2vw, 1rem);
+      font-weight: 600;
+      color: var(--wave-soft);
+      margin: 0.55rem 0 0;
+      padding-left: 0.1em;
+    }
+    /* Wave-underline accent */
+    .wave-accent { display: block; width: clamp(140px, 30vw, 240px); height: 14px; margin-top: 0.9rem; color: var(--wave); }
+
+    .hero h1 {
+      font-size: clamp(1.4rem, 3.4vw, 2.1rem);
+      font-weight: 600;
+      max-width: 22ch;
+      margin-top: 1.8rem;
+    }
+    .hero p.lede {
+      color: #d4e2f0;
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+      max-width: 56ch;
+      margin: 1rem 0 2rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
+
+    .hero-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2.4rem;
+      font-size: 0.92rem;
+      color: #b9cde0;
+    }
+    .hero-meta b { color: #fff; font-weight: 600; }
+
+    /* Logo placeholder badge (swap for real logo file) */
+    .logo-slot {
+      width: 56px; height: 56px; flex: 0 0 auto;
+      border-radius: 10px;
+      background: var(--navy);
+      display: grid; place-items: center;
+      color: var(--wave-soft);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* ---------------- SECTIONS ---------------- */
+    section { padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: clamp(3rem, 7vw, 5rem); }
+    .section-head { max-width: 60ch; margin-bottom: 2.5rem; }
+    .section-head h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--navy); }
+    .section-head p { color: var(--muted); font-size: 1.05rem; margin: 0; }
+    .alt { background: var(--paper-warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    }
+    .card:hover { border-color: var(--wave-soft); box-shadow: 0 10px 30px -18px rgba(12,39,66,0.4); transform: translateY(-2px); }
+    .card .ico { width: 30px; height: 30px; color: var(--wave); margin-bottom: 0.9rem; }
+    .card h3 { font-size: 1.12rem; color: var(--navy); }
+    .card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+
+    /* ---------------- GALLERY ----------------
+       Flex layout centers gracefully with few photos and
+       wraps into a tidy grid as photos are added.
+    */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .gallery .shot {
+      flex: 1 1 320px;
+      max-width: 420px;
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--paper-warm);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .gallery .shot img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery .shot:hover img { transform: scale(1.04); }
+
+    /* Tasteful placeholder tile shown until real photos are dropped in */
+    .gallery .shot.placeholder {
+      display: grid;
+      place-items: center;
+      background:
+        repeating-linear-gradient(45deg, #eef3f8 0 12px, #f6f9fc 12px 24px);
+      color: var(--muted);
+    }
+    .gallery .shot.placeholder .ph-inner { text-align: center; padding: 1rem; }
+    .gallery .shot.placeholder svg { width: 34px; height: 34px; color: var(--wave); opacity: 0.7; }
+    .gallery .shot.placeholder span { display: block; font-size: 0.82rem; margin-top: 0.5rem; letter-spacing: 0.04em; }
+
+    .gallery-note { text-align: center; color: var(--muted); font-size: 0.92rem; margin-top: 1.75rem; }
+
+    /* ---------------- CONTACT / CTA ---------------- */
+    .contact {
+      background:
+        radial-gradient(900px 400px at 20% 120%, rgba(47,127,193,0.22), transparent 60%),
+        linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: #fff;
+    }
+    .contact .section-head h2 { color: #fff; }
+    .contact .section-head p { color: #c8d8e8; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; gap: 1.75rem; } }
+    .contact-list { list-style: none; padding: 0; margin: 0; }
+    .contact-list li { display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .contact-list li:last-child { border-bottom: 0; }
+    .contact-list .k { color: #9fb8d0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; min-width: 84px; padding-top: 2px; }
+    .contact-list .v { color: #fff; font-weight: 500; }
+    .contact-list .v a { color: #fff; }
+    .contact-list .v a:hover { color: var(--wave-soft); }
+
+    .contact-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+    .contact-card h3 { color: #fff; font-size: 1.2rem; }
+    .contact-card p { color: #c8d8e8; margin: 0 0 1.25rem; font-size: 0.98rem; }
+    .contact-card .btn-primary { width: 100%; text-align: center; }
+
+    /* ---------------- FOOTER ---------------- */
+    footer.site {
+      background: var(--navy-deep);
+      color: #9fb3c7;
+      padding: 2rem 0;
+      font-size: 0.88rem;
+    }
+    .foot {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+      justify-content: space-between; align-items: center;
+    }
+    .foot .mark b { color: #fff; font-weight: 700; letter-spacing: 0.04em; }
+    .foot a { color: #cfe0ef; }
+    .lic-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 0.3rem 0.8rem;
+      color: #cfe0ef; font-size: 0.82rem;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site">
+    <div class="wrap nav">
+      <a class="nav-mark" href="#top" aria-label="Blue Wave Construction home">
+        <!-- LOGO PLACEHOLDER: replace this .logo-slot block with <img src="images/logo.svg" ...> -->
+        <span class="logo-slot" aria-hidden="true">
+          <svg width="26" height="14" viewBox="0 0 60 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 14c6 0 8-8 14-8s8 8 14 8 8-8 14-8 8 8 14 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="stack">
+          <span class="bw">BLUE WAVE</span>
+          <span class="cn">CONSTRUCTION</span>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Recent Work</a>
+        <a href="#contact" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="lockup">
+        <p class="wordmark">BLUE&nbsp;WAVE</p>
+        <p class="subword">CONSTRUCTION</p>
+        <!-- wave-underline accent -->
+        <svg class="wave-accent" viewBox="0 0 240 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 8c20 0 22-10 40-10s22 12 40 12 22-10 40-10 22 12 40 12 22-10 40-10 22 12 36 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+
+      <h1>Boutique general contracting for the South Bay, built on trust.</h1>
+      <p class="lede">
+        Owner-operated and licensed. From full renovations to honest repairs and fix-and-flip
+        projects, you work directly with me from first walkthrough to final walkthrough — no
+        layers, no runaround.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Start a conversation</a>
+        <a class="btn btn-ghost" href="#work">See recent work</a>
+      </div>
+
+      <div class="hero-meta">
+        <span><b>South Bay, Los Angeles</b> &nbsp;·&nbsp; service area</span>
+        <span><b>CA GC License #1153965</b></span>
+        <span><b>(310) 995-7741</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">What I do</p>
+        <h2>General contracting, done the right way</h2>
+        <p>A focused range of work I take on personally — so quality and communication stay consistent from start to finish.</p>
+      </div>
+
+      <div class="services">
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          <h3>General Contracting</h3>
+          <p>Ground-up coordination and project management for residential and light commercial work across the South Bay.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7l3 3M3 21l3-1 11-11a2.1 2.1 0 0 0-3-3L3 18l-1 3z"/></svg>
+          <h3>Renovations &amp; Remodels</h3>
+          <p>Kitchens, baths, additions, and whole-home updates that respect your budget, timeline, and the home you already love.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg>
+          <h3>Repairs &amp; Maintenance</h3>
+          <p>Dependable repairs done right the first time — the kind of work that earns a call back for the next project.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10M9 20v-6h6v6"/></svg>
+          <h3>Fix &amp; Flip</h3>
+          <p>Investor-minded renovations that move fast and finish clean, with an eye on resale value and cost discipline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECENT WORK / GALLERY ================= -->
+  <section id="work" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Recent work</p>
+        <h2>A look at the craft</h2>
+        <p>A growing record of completed projects across the South Bay. New work is added as it wraps.</p>
+      </div>
+
+      <!--
+        GALLERY
+        To add a project photo, drop a file in images/projects/ and add a tile:
+
+          <a class="shot" href="images/projects/your-photo.jpg">
+            <img src="images/projects/your-photo.jpg" alt="Short description of the project" loading="lazy" />
+          </a>
+
+        Remove the placeholder tiles below once you have 3+ real photos.
+        The layout stays centered and intentional whether there are 1 or 12 tiles.
+      -->
+      <div class="gallery">
+        <!-- Example real tile (kept commented until a photo exists):
+        <a class="shot" href="images/projects/example.jpg">
+          <img src="images/projects/example.jpg" alt="Completed kitchen remodel in Redondo Beach" loading="lazy" />
+        </a>
+        -->
+
+        <!-- Placeholder tiles — delete as real photos are added -->
+        <div class="shot placeholder" aria-hidden="true">
+          <div class="ph-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+            <span>Project photos coming soon</span>
+          </div>
+        </div>
+        <div class="shot placeholder" aria-hidden="true">
+          <div class="ph-inner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5L5 19"/></svg>
+            <span>Project photos coming soon</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="gallery-note">Have a project in mind? I'm glad to share references and walk you through past work.</p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" style="color: var(--wave-soft);">Let's talk</p>
+        <h2>Get a straight answer on your project</h2>
+        <p>Tell me what you're planning and I'll give you an honest read — scope, rough timeline, and next steps. No pressure, no sales pitch.</p>
+      </div>
+
+      <div class="contact-grid">
+        <ul class="contact-list">
+          <li><span class="k">Phone</span><span class="v"><a href="tel:+13109957741">(310) 995-7741</a></span></li>
+          <li><span class="k">Email</span><span class="v"><a href="mailto:ryan@bluewavela.com">ryan@bluewavela.com</a></span></li>
+          <li><span class="k">Service area</span><span class="v">South Bay, Los Angeles</span></li>
+          <li><span class="k">License</span><span class="v">CA GC #1153965</span></li>
+        </ul>
+
+        <div class="contact-card">
+          <h3>Start a conversation</h3>
+          <p>The fastest way to reach me is a call or text. Prefer email? Send a few details about your project and I'll get back to you.</p>
+          <a class="btn btn-primary" href="mailto:ryan@bluewavela.com?subject=Project%20inquiry%20%E2%80%94%20Blue%20Wave%20Construction">Email Ryan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site">
+    <div class="wrap foot">
+      <div class="mark"><b>BLUE WAVE</b> CONSTRUCTION &nbsp;·&nbsp; South Bay, Los Angeles</div>
+      <span class="lic-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg>
+        Licensed &amp; insured · CA GC #1153965
+      </span>
+      <div>&copy; <span id="yr">2026</span> Blue Wave Construction</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
